@@ -53,6 +53,8 @@
             <artifactId>libthrift</artifactId>
         </dependency>
 
+
+
         <dependency>
             <groupId>io.airlift</groupId>
             <artifactId>aircompressor</artifactId>
@@ -147,6 +149,18 @@
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-s3</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>joda-time</groupId>
+                    <artifactId>joda-time</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-glue</artifactId>
+            <version>${dep.aws.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>joda-time</groupId>
